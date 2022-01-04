@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+.nav {
+	height: 50px;
+	background-color: #333;
+	text-align: center;
+	line-height: 50px;
+	font-size: 0;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a {
+	padding: 0 50px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 2px;
+	/* background-color: gold; */
+	transition: color 0.3;
+}
+.nav-item a:hover {
+	color: #0086f3;
+
+	/* Aby wyeliminować problem z odstępami w html ponieważ po wciśnięciu ctrl+s i tak kod nam się poukłada można w tym przypadku aby zlikwidować odstępy pomiędzy polami w menu nadać na rodzicu czyli nav{} font-size: 0; a dopiero na dziecku nav li a{} np. font-size: 16x; Odstępy nam znikną */
+}

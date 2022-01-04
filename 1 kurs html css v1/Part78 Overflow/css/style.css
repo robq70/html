@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 50px;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 36px;
+}
+.square {
+	width: 300px;
+	height: 300px;
+	background-color: royalblue;
+	/* Overflow pozwala ukryć zawartość, która nie mieści się w danym elemencie */
+	overflow: visible;
+	/* Widzimy wszystko nawet tekst poza kwadratem */
+	overflow: hidden;
+	/* Widzimy tylko tekst w kwadracie */
+	overflow: auto;
+	/* Jeśli tekst jest za duży zostanie dodany pasek przewijania */
+	overflow: scroll;
+	/* Dodany zostanie dolny i lewy pasek przewijania nawet jeśli tekstu nie ma */
+}

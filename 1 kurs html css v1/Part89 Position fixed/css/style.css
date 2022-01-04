@@ -1,0 +1,40 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 36px;
+	color: #fff;
+
+	height: 200vh;
+}
+section {
+	margin-top: 400px;
+}
+
+div {
+	margin: 0 auto;
+	height: 200px;
+	width: 600px;
+	border: 3px solid black;
+}
+
+.red {
+	background-color: tomato;
+}
+
+.blue {
+	position: fixed;
+	top: 0px;
+	/* Za pomocą position: fixed; możemy przykleić element na stronie tak aby był cały czas widoczny - sprawdza się to np. w menu które jest cały czas widoczne u góry strony w trakcie przewijania*/
+	margin: 0px auto;
+	background-color: royalblue;
+}
+
+.green {
+	background-color: greenyellow;
+}

@@ -1,0 +1,45 @@
+// @mixin musi być wyżej niż @include który go dodaje do jakiejś klasy poneważ przeglądarka czyta kod od góry do dołu i jeśli on nie wystąpi to go nie doda. Używamy aby w łatwy sposób dodać parametry do kodu poprzez css zamiast dodawać nowe klasy w html.
+@mixin addons {
+	background-color: gold;
+	border-radius: 25px;
+}
+
+// klasy .success i .warning wywołują @mixin color a następnie podstawiają go pod zmienną $bg-color
+@mixin color($bg-color) {
+	background-color: $bg-color;
+}
+
+@mixin border-color($bd-color) {
+	border-top: $bd-color;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #333;
+	font-family: sans-serif;
+}
+
+.square {
+	@include addons;
+	margin: 30px;
+	width: 200px;
+	height: 200px;
+	border: 5px solid #000;
+}
+
+.neutral {
+	@include color(gold);
+	@include border-color(5px solid lime);
+}
+.success {
+	@include color(lime);
+	@include border-color(5px solid red);
+}
+.warning {
+	@include color(tomato);
+	@include border-color(5px solid gold);
+}

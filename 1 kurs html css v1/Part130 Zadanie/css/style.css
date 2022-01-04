@@ -1,0 +1,47 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	color: #fff;
+}
+.long {
+	position: absolute;
+	top: 250px;
+	left: 50px;
+	height: 600px;
+	width: 150px;
+	padding: 10px;
+	background-color: tomato;
+	overflow: hidden;
+	transition: height 0.3s;
+}
+
+.long:hover {
+	height: 200px;
+}
+
+.big {
+	position: absolute;
+	top: 250px;
+	right: 50px;
+	height: 600px;
+	width: 800px;
+	background-color: royalblue;
+}
+.child {
+	border: solid 3px #000;
+	height: 200px;
+	transition: background-color 1s;
+}
+.first + .child {
+	background-color: lime;
+}
+
+.first:hover ~ .child {
+	background-color: gold;
+}

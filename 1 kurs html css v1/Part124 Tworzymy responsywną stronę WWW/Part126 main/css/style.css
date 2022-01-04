@@ -1,0 +1,187 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* Sekcja klas wspólnych */
+
+/* wrapper trzyma treść na środku strony w zdefiniowanym kontenerze niezależnie od tego jak szeroki jest monitor. */
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+.hero-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.hero-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	/* nie musimy się bawić z-index ponieważ hero-bg jest ponad hero-text*/
+}
+.hero-text h1 {
+	margin-bottom: 5px;
+	text-shadow: 3px 3px 5px #000;
+	color: #ddd;
+}
+.hero-text span {
+	text-transform: uppercase;
+	color: #09f;
+}
+.section-title {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* Sekcja nawigacji strony */
+nav {
+	height: 60px;
+	line-height: 60px;
+	/* Teraz stosujemy line-height ale później będziemy flex-boxa */
+	background-color: #ddd;
+	text-align: center;
+}
+.burger-icon {
+	display: block;
+	margin-left: auto;
+	padding: 0 30px;
+	line-height: 60px;
+	font-size: 30px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+.burger-icon:hover {
+	color: #fff;
+}
+.nav-items {
+	display: none;
+}
+/* Sekcja Header */
+.header {
+	position: relative;
+	height: 330px;
+	background-image: url('../img/hero-small.jpg');
+	background-size: cover;
+	/* nie będziemy mieć zduplikowanego zdjęcia */
+	background-position: center;
+	text-align: center;
+}
+/* Sekcja Main */
+main {
+	margin: 60px 0;
+}
+
+/* o nas */
+
+.about-us-info {
+	margin-bottom: 10px;
+	/* padding aby odsunąć tekst od krawędzi telefonu */
+	padding: 0 20px;
+}
+
+/* produkty */
+
+.products {
+	margin: 60px auto;
+}
+
+.product {
+	position: relative;
+	/* aby wyciągnąć ze strony */
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	font-size: 16px;
+}
+
+.product h3 {
+	/* Odwołujemy się tylko do naszych h3 w div products */
+	text-transform: uppercase;
+}
+.first-product {
+	background-image: url(../img/children-small.jpg);
+}
+.second-product {
+	background-image: url(../img/keyboard-small.jpg);
+}
+.third-product {
+	background-image: url(../img/woman-small.jpg);
+}
+.fourth-product {
+	background-image: url(../img/laptop-small.jpg);
+}
+
+@media (min-width: 768px) {
+	.burger-icon {
+		display: none;
+	}
+	.nav-items {
+		display: block;
+	}
+	.nav-items a {
+		padding: 0 30px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #333;
+		transition: color 0.3s;
+	}
+	.nav-items a:hover {
+		color: #09f;
+	}
+	.header {
+		height: 400px;
+		background-image: url('../img/hero-big.jpg');
+		/* większe zdjęcie i szerkość żeby np. na ipadzie było lepiej widać */
+	}
+	.hero-text h1 {
+		font-size: 36px;
+		/* większa czcionka żeby np. na ipadzie było lepiej widać */
+	}
+	.hero-text p {
+		font-size: 18px;
+		/* większa czcionka żeby np. na ipadzie było lepiej widać */
+	}
+	.product h3 {
+		/* większa czcionka żeby np. na ipadzie było lepiej widać */
+		font-size: 24px;
+	}
+}
+@media (max-width: 992px) {
+	.product {
+		display: inline-block;
+		/* 
+		Elementy blokowe mają zawsze width na szerokość swojego rodzica. Poprzez dodanie display: inline-block; my tę szerokość zabraliśmy.
+		Zawartość znikła ponieważ wyrwaliśmy je z .product poprzez position: relative; do display: inline-block; który jest elementem liniowym i zajmuje tylko tyle miejsca ile ma treści w sobie */
+		width: 45%;
+	}
+	.product-box {
+		/* Aby nie było odstępów pomiędzy zdjęciami przy ich zmianie na kafelki (znowu błąd spacji html) umieszczamy zawartość w s pecjalnym pudełku <div class=product-box> i nadajemy czcionce rozmiar 0. Ponieważ wyżej określiliśmy dokładniej zwracając się bezpośrednio do h3 jej rozmiar to ona się nie zmieni */
+		font-size: 0;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero-text h1 {
+		font-size: 42px;
+		/* większa czcionka przy wyższej rozdzielczości */
+	}
+	.hero-text p {
+		font-size: 20px;
+		/* większa czcionka przy wyższej rozdzielczości */
+	}
+}

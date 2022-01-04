@@ -1,0 +1,46 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 50px;
+}
+
+section {
+	display: flex;
+	align-items: flex-end;
+	height: 400px;
+	border: 5px solid black;
+}
+
+.square {
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+}
+
+.one {
+	background-color: gold;
+	/* align-self nadajemy na dzieci */
+	align-self: start;
+}
+
+.two {
+	background-color: lime;
+	align-self: center;
+}
+
+.three {
+	background-color: royalblue;
+	align-self: flex-end;
+}
+
+.four {
+	background-color: tomato;
+	align-self: stretch;
+}

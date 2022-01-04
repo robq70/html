@@ -1,0 +1,51 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 50px;
+}
+section {
+	/* SECTION DLA KOLUMN */
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+	/* SECTION DLA WIERSZY */
+	/* display: flex; */
+	justify-content: flex-start;
+	/* Justuje od lewej elementy bez przerw */
+	justify-content: flex-end;
+	/* Justuje od prawej elementy bez przerw */
+	justify-content: center;
+	/* Justuje na środku elementy bez przerw */
+	justify-content: space-between;
+	/* Tworzy spacje pomiędzy elementami - pierwszy i ostatni przylegają do krawędzi okna i spacje tworzą się pomiędzy resztą */
+	justify-content: space-around;
+	/* Justuje odstępy są takie same tylko pomiędzy elementami 
+	Np. każdy od lewej i od prawej ma 20px czyli od krawędzi okna lewej i prawej mamy 20px a pomiędzy elementami 20px*2 = 40px */
+	justify-content: space-evenly;
+	/* Justuje i wszędzie odstępy są takie same */
+}
+.square {
+	width: 20%;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+}
+.one {
+	background-color: gold;
+}
+.two {
+	background-color: lime;
+}
+.three {
+	background-color: royalblue;
+}
+.four {
+	background-color: tomato;
+}

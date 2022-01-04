@@ -1,0 +1,19 @@
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+}
+
+.container p {
+	background-color: royalblue;
+}
+.container-fluid p {
+	background-color: gold;
+}

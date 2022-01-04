@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 50px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	color: #fff;
+	background-color: #333;
+}
+table,
+tr,
+td {
+	border: 1px solid black;
+}
+td {
+	width: 300px;
+	height: 100px;
+}
+
+// ostylowanie wierszy w tabeli nieparzystych i parzystych
+tr:nth-child(odd) {
+	background-color: #ddd;
+}
+tr:nth-child(even) {
+	background-color: #888;
+}

@@ -1,0 +1,97 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #333;
+}
+.box {
+	padding: 80px 140px;
+	border-radius: 15px;
+	background-color: #222;
+	box-shadow: 0 0 15px rgba(0, 140, 255, 0.6);
+}
+.link {
+	position: relative;
+	padding: 10px 20px;
+	font-size: 40px;
+	color: rgb(0, 140, 255);
+	text-decoration: none;
+}
+.link:hover {
+	cursor: none;
+}
+
+.link,
+.link::after,
+.link::before {
+	transition: 0.3s;
+	// tutaj transition zrobione jest dla ułatwienia wspólne ale powinno się robić je osobno dla każdej właściwości np. transform, color itp.
+}
+.one::after {
+	// pseudoelement musi mieć jakąś zawartość nawet jeśli jest ona pusta content
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background-color: #fff;
+	//dodano transition: transform 0.3s; bo animacja dziwnie skakała
+	transition: transform 0.3s;
+	//po dodaniu scaleX(0); linia nam zniknie
+	transform: scaleX(0);
+	// steruje gdzie ta nasza animacja ma się zaczynać
+	transform-origin: right;
+}
+.one:hover::after {
+	transform: scaleX(1);
+	// steruje gdzie animacja ma się skończyć czyli wychodzi na scalex(1) od prawej i powraca do stnu początkowego z tego stanu do lewej
+	transform-origin: left;
+}
+.two::before,
+.two::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+.two::before {
+	top: -2px;
+	left: -8px;
+	border-top: 0 solid #fff;
+	border-left: 0 solid #fff;
+}
+.two::after {
+	bottom: -2px;
+	right: -8px;
+	border-bottom: 0 solid #fff;
+	border-right: 0 solid #fff;
+}
+.two:hover::before {
+	width: 50px;
+	height: 50%;
+	border-top: 2px solid #fff;
+	border-left: 2px solid #fff;
+}
+.two:hover::after {
+	width: 50px;
+	height: 50%;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+}
+
+// .three {
+// }
+// .four {
+// }
+// .five {
+// }

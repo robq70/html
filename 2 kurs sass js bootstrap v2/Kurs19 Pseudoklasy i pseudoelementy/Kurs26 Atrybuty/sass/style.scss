@@ -1,0 +1,67 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	color: #fff;
+	background-color: #333;
+	margin: 30px;
+}
+
+a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+[href] {
+	//odwołanie się do atrybutu wewnątrz <a href=''>
+	color: gold;
+}
+[href='apple.com'] {
+	//odwołanie się do konkretnego linku w atrybucie wewnątrz <a href=''>
+	color: gold;
+}
+
+//Możemy odwołać się do [id], [class], [src] i innych
+[class='test'] {
+	color: hotpink;
+}
+p[class='test'] {
+	color: hotpink;
+}
+[class*='test'] {
+	//znajdź wszystkie klasy, które mają w nazwie test
+	color: red;
+}
+// Wyszukiwanie linków do plików określonych typów i dodawanie za pomocą pseudoklas i atrybutów automatycznie ikon
+a[href$='xls']::before {
+	content: '';
+	display: inline-block; //po to żeby móc pracować na wymiarach
+	width: 24px;
+	height: 24px;
+	padding-left: 10px;
+	background: url('https://icons.iconarchive.com/icons/benjigarner/softdimension/24/Excel-icon.png')
+		no-repeat;
+}
+a[href$='doc']::before {
+	content: '';
+	display: inline-block; //po to żeby móc pracować na wymiarach
+	width: 24px;
+	height: 24px;
+	padding-left: 10px;
+	background: url('https://icons.iconarchive.com/icons/benjigarner/softdimension/24/MS-Word-2-icon.png')
+		no-repeat;
+}
+a[href$='pdf']::before {
+	content: '';
+	display: inline-block; //po to żeby móc pracować na wymiarach
+	width: 24px;
+	height: 24px;
+	padding-left: 10px;
+	background: url('https://icons.iconarchive.com/icons/hopstarter/soft-scraps/24/Adobe-PDF-Document-icon.png')
+		no-repeat;
+}

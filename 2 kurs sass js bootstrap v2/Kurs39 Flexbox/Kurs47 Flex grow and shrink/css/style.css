@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 50px;
+}
+
+section {
+	display: flex;
+}
+
+.square {
+	width: 450px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+}
+
+.one {
+	background-color: gold;
+	/* flex-grow: 1; - mówi nam czy element może rosnąć*/
+	/* flex-shrink: 0; -deklarujemy że element nie może się skurczyć poza zadeklarowaną wartość*/
+}
+
+.two {
+	background-color: lime;
+	/* flex-grow: 2; - mówi nam czy element może rosnąć urośnie 2x więcej niż poprzedni zadeklarowany na poziomie 1*/
+	/* flex-shrink: 1 - kurczyć się będzie tak samo jak pozostałe, 2n - kurczyć się będzie szybciej o zadeklarowaną wartość  */
+}
+
+.three {
+	background-color: royalblue;
+}
+
+.four {
+	background-color: tomato;
+}

@@ -1,0 +1,76 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: 'Comic Neue', cursive;
+  background: radial-gradient(circle, #2b2c2e 13%, #191919 65%);
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1000px;
+}
+
+.card {
+  position: relative;
+  margin: 10px;
+  height: 800px;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.one {
+  background-image: url("../img/portrait-big.jpg");
+}
+
+.two {
+  background-image: url("../img/man-big.jpg");
+}
+
+button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 36px;
+  text-shadow: 2px 2px 5px black;
+  cursor: crosshair;
+}
+
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+}
+/*# sourceMappingURL=style.css.map */

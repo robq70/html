@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+	background-color: #333;
+}
+p {
+	display: none;
+	/*Ukrycie paragrafu*/
+}
+@media (min-width: 400px) {
+	body {
+		background-color: gold;
+	}
+}
+@media (min-width: 600px) {
+	body {
+		background-color: royalblue;
+	}
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+	body {
+		background-color: tomato;
+		}
+		p{
+			display: block;
+		}
+}

@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+}
+/* Nasza nawigacja */
+.nav {
+	height: 50px;
+	background-color: #333;
+	text-align: center;
+	line-height: 50px;
+	font-size: 0;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a {
+	padding: 0 50px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 2px;
+	/* background-color: gold; */
+	transition: color 0.3;
+}
+.nav-item a:hover {
+	color: #0086f3;
+}
+/* Nasz header */
+.header-img {
+	position: relative;
+	height: 300px;
+	background-image: url('../img/planets-g94b164bf2_1920.jpg');
+	background-size: cover;
+	background-position: 0 50%;
+}
+.header-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	z-index: 5; /*Aby tekst był przed obrazkiem - jest widoczny ale nie można go zaznaczyć, można też w html przenieść div z header-bg wyżej ponad text aby był on czytany na stronie przed tekstem  */
+}
+.header-text h1 {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.header-bg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 3, 27, 0.4);
+	/* Dzięki background-color i kanałowi alpha możemy w przyszłości zmieniąć odcień obrazka w zależności od okoliczności */
+}

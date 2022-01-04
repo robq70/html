@@ -1,0 +1,55 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: #fff;
+  background-color: #333;
+}
+
+.sky {
+  position: relative;
+  background-color: #4269dc;
+  height: 60vh;
+}
+
+.sun {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: #ffa608;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 70px #ffa608;
+          box-shadow: 0 0 70px #ffa608;
+}
+
+.ground {
+  position: relative;
+  bottom: 0;
+  height: 40vh;
+  background-color: #4a3535;
+}
+
+.grass {
+  position: absolute;
+  top: 0;
+  height: 200px;
+  width: 100%;
+  background-color: #00ff0b;
+}
+
+.road {
+  position: absolute;
+  top: 30px;
+  height: 120px;
+  width: 100%;
+  background-color: #808080;
+}
+/*# sourceMappingURL=style.css.map */

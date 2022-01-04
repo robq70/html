@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #333;
+}
+button {
+	padding: 10px 20px;
+	margin: 20px;
+	font-size: 48px;
+	background: none;
+	cursor: pointer;
+	transition: color 0.3s;
+	text-transform: uppercase;
+}
+button:hover {
+	color: rgb(0, 255, 34);
+}
+.normal {
+	border: none;
+}
+.circle {
+	border: 1px solid black;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+}
+button:focus {
+	// na niektórych przeglądarkach po naciśnięciu buttona pozostają linie wokół normal i circle kwadratowe ramki, żeby się tego pozbyć robimy to tak
+	outline: none;
+	// outline jest po to żeby osoby niepełnosprawne posługujące się na przeglądarkach tabem wiedziały w którym miejscu się znajdują w zamian możemy dać np: coś takiego
+	color: tomato;
+	// lub np.
+	border-bottom: 1px solid #000;
+}

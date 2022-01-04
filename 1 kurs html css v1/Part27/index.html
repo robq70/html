@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Robert Kukułka" />
+	<meta name="keywords" content="strony html, kodowanie, css, jscript" />
+	<meta name="content" content="Strona firmowa" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.css" />
+	<title>Nestlan website</title>
+</head>
+
+<body>
+	<nav>
+		<button>Link1</button>
+		<button disabled>Link2</button>
+	</nav>
+	<header>
+		<h1>Tworzenie stron wwww</h1>
+	</header>
+
+	<main>
+		<section>
+			<h2>Strony firmowe</h2>
+			<h3>Opcja 1</h3>
+			<h3>Opcja 2</h3>
+		</section>
+		<section>
+			<h2>Strony domowe</h2>
+			<h3>Opcja 1</h3>
+			<h3>Opcja 2</h3>
+		</section>
+		<br /><br />
+		<section>
+			<h2>Formularze</h2>
+			<form action="">
+				<label for="">Imię</label>
+				<input type="text" />
+				<br />
+				<label for="">Wiadomość</label>
+				<textarea name="" id="" cols="30" rows="10"></textarea>
+				<br />
+				<select name="" id="">
+					<option value="">Czerwony</option>
+					<option value="">Niebieski</option>
+					<option value="" disabled>Zielony</option>
+				</select>
+				<input type="text" />
+				<input type="checkbox" checked />
+				<input type="checkbox" />
+				<input type="radio" />
+				<input type="radio" />
+				<input type="radio" />
+				<input type="color" />
+				<input type="date" />
+				<input type="password" />
+			</form>
+		</section>
+		<br /><br />
+		<section>
+			<h2>Formatowanie tekstu</h2>
+			<del>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </del><br />
+			<s>Lorem ipsum dolor sit amet consectetur adipisicing elit.</s>
+			<br /><br />
+
+			<p>Lorem ipsum dolor sit amet.</p>
+			<b>Lorem ipsum dolor sit amet.</b>
+			<br />
+			<strong>Lorem ipsum dolor sit amet.</strong>
+			<br /><br />
+			<i>Lorem ipsum dolor sit amet consectetur adipisicing.</i>
+			<br />
+			<em>Lorem ipsum dolor, sit amet consectetur adipisicing.</em>
+			<br /><br />
+			<u>Lorem ipsum dolor sit amet consectetur adipisicing elit.</u>
+			<!-- 
+					strong, em - semantyka
+					b, u, i - CSS
+				 -->
+			<br /><br />
+			<p>
+				Lorem ipsum <mark>dolor sit amet consectetur</mark> adipisicing elit.
+				Eaque.
+			</p>
+			<br /><br />
+			<p>2<sup>2</sup> = 4</p>
+			<p>H<sub>2</sub>O</p>
+			<br /><br />
+			<p>Lorem ipsum dolor sit amet.</p>
+			<pre>
+Lorem    ipsum
+					 dolor sit amet.</pre>
+			<!-- 
+						 Jeśli chcemy aby przeglądarka nie ignorowała białych znaków tzn. kilku spacji, enterów itp.  to musimy użyć <pre></pre>
+					  -->
+			<p>Lorem &nbsp;&nbsp;&nbsp;&nbsp; ipsum dolor sit amet.</p>
+		</section>
+		<br /><br />
+		<section>
+			<h1>Listy w HTML</h1>
+			<br /><br />
+			<!-- uporządkowana lista -->
+			<ol>
+				<li>Pozycja 1</li>
+				<li>Pozycja 2</li>
+				<li>Pozycja 3</li>
+				<li>Pozycja 4</li>
+			</ol>
+			<br /><br />
+			<!-- nieuporządkowana lista -->
+			<ul>
+				<li>Pozycja 1</li>
+				<li>Pozycja 2</li>
+				<li>Pozycja 3</li>
+				<li>Pozycja 4</li>
+			</ul>
+		</section>
+	</main>
+
+	<aside>
+		<nav>
+			<a href="https://google.pl" target="_blank">Link google</a>
+			<a href="https://nestlan.pl" target="_blank">Link nestlan</a>
+		</nav>
+	</aside>
+	<footer>2021 Nestlan.pl</footer>
+</body>
+
+</html>

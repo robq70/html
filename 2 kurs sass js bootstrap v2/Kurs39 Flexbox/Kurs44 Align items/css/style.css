@@ -1,0 +1,57 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 50px;
+}
+section {
+	background-color: #678;
+	height: 600px;
+
+	/* 
+	DOTYCZY KOLUMN
+	display: flex;
+	flex-direction: column; */
+
+	/* DOTYCZY WIERSZY */
+	/* display: flex; */
+
+	align-items: stretch;
+	/* Wyrównanie domyślne czyli elementy do lewej górnej krawędzi rozciągnięte są na całą dostępną wysokość*/
+	align-items: flex-start;
+	/* Elementy do lewej górnej krawędzi na wysokość czcionki*/
+	align-items: flex-end;
+	/* Elementy do lewej dolnej krawędzi na wysokość czcionki*/
+	align-items: center;
+	/* Elementy do środka lewej krawędzi na wysokość czcionki*/
+	justify-content: center;
+	/* Dodatkowo wyśrodkuje elementy wewnątrz sekcji */
+	align-items: baseline;
+	/* Jak przy align-items: stretch; ale jeśli zmienimy w każdym div czcionkę to wszystkie bedą miały rozmiar swojej czcionki i wyrównają się tak aby czcionki od dołu były w jednej linii  */
+
+	/* 
+	Ta para współpracuje razem
+	align-items: ;
+	justify-content: ; */
+}
+.square {
+	width: 20%;
+	text-align: center;
+}
+.one {
+	background-color: gold;
+}
+.two {
+	background-color: lime;
+}
+.three {
+	background-color: royalblue;
+}
+.four {
+	background-color: tomato;
+}

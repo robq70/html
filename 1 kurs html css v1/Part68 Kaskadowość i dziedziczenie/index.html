@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nestlan</title>
+		<!-- Zewnętrzny plik css musi być wyżej od naszego jeśli nasze style mają być nadrzędne -->
+		<link rel="stylesheet" href="./css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/4fe226548b.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<h3>Kaskadowość i dziedziczenie</h3>
+		<!-- rodzic - dziecko div jest rodzicem dla paragrafu-->
+		<div>
+			<p></p>
+		</div>
+		<!-- rodzeństwo div są na tym samym poziomie-->
+		<div></div>
+		<div></div>
+		<div></div>
+		<!-- cała rodzinka -->
+		<main>
+			<section>
+				<div>
+					<p></p>
+				</div>
+			</section>
+		</main>
+
+		<div class="parrent">
+			<p>Paragraf w parent</p>
+			<span>Span w parent</span>
+		</div>
+
+		<div>
+			<p>Paragraf w div bez klasy</p>
+			<span>Span w div bez klasy</span>
+		</div>
+	</body>
+</html>

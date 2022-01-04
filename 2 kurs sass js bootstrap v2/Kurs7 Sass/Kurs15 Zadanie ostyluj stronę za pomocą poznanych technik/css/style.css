@@ -1,0 +1,60 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #333;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+section {
+  position: relative;
+  height: 25vh;
+  font-size: 0;
+  text-align: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  background-color: lime;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.odd {
+  background-color: #01bffa;
+}
+
+.even {
+  background-color: #1d90f8;
+}
+
+h1 {
+  font-size: 3rem;
+  color: gold;
+}
+
+h2 {
+  font-size: 2.4rem;
+  color: gold;
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: gold;
+}
+
+p {
+  font-size: 1.6rem;
+}
+/*# sourceMappingURL=style.css.map */

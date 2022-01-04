@@ -1,0 +1,186 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	// dodajemy tę właściwość ponieważ po kliknięciu w menu o nas napis "o nas" ukrywa się pod nawigacją ponieważ nawigacja ma position sicky więc jest wyjęta ze struktury strony znajduje się w innej warstwie. Mierzymy wysokość naszej nawigacji łącznie z paddingirm i ustwiamy wartość jak poniżej. Ponieważ jest to ustawienie dla mobile a w wersji na PC wartość się różni trzeba ustawić @media dodatkową wartość dla wyższych rozdzielczości powyżej 992px
+	scroll-padding-top: 82;
+}
+body {
+	background-color: #444;
+	font-family: sans-serif;
+}
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+}
+.blue-text {
+	color: $main-color;
+}
+.shadow-bg {
+	// klasa wywoływana dynamicznie poprzez funkcję js aby strona nie nakładała się na nasze menu po przekroczeniu 300px, transition aby przejście było widoczne zarówno podczas dodawania jak i usuwania klasy shadow-bg musimy nadać na naszego nav
+	background-color: rgba(0, 0, 0, 0.8);
+}
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s; // ten transition dotyczy .shadow-bg
+	z-index: 1;
+	a {
+		color: $white-color;
+	}
+	a:hover {
+		color: $main-color;
+	}
+	.fa-bars {
+		padding: 10px;
+		color: $white-color;
+	}
+	.navbar-brand {
+		font-weight: bold;
+	}
+	.active {
+		color: $main-color;
+	}
+}
+header {
+	color: $white-color;
+
+	h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+	p {
+		font-size: 14px;
+	}
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/ps-mini.jpg');
+		background-position: center;
+		// podczas przewijania strony obrazek będzie się zwężał
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+		// z-indexy nadana na obrazku zerowy(jednak tutaj na -1 (tutaj na -2 ze względu na nawigację) aby po zmianach nie przykryć menu nawigazji), cień najmmniejszy, napisy największy
+	}
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -1;
+	}
+	.hero-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 2;
+	}
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+	.fa-chevron-down {
+		position: absolute;
+		// left + transform wypozycjonowanie strzałki względem osi X
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 30px;
+		bottom: 20px;
+		color: $white-color;
+	}
+}
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+	.aboutus-hover {
+		// dodajemy oprócz .aboutus-hover:hover samą klasę .aboutus-hover żeby kolor się animował również po cofnięciu myszki z obiektu
+		transition: color 0.3s;
+	}
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+.aboutus-hero {
+	position: relative;
+	background-image: url('../img/technology-mini.jpg');
+	background-position: center;
+	background-size: cover;
+	color: $white-light-color;
+	z-index: 0;
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -5;
+	}
+	.aboutus-hero-item {
+		margin: 10px 0;
+		i {
+			font-size: 36px;
+		}
+		.aboutus-hero-title {
+			font-size: 24px;
+		}
+		}
+}
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 38px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+@media (min-width: 810px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url('../img/ps-big.jpg');
+		}
+	}
+}
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+	.aboutus-hero {
+		background-image: url('../img/technology-big.jpg');
+	}
+}

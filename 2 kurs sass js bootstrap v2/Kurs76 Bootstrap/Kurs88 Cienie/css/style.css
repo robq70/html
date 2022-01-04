@@ -1,0 +1,17 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 100px;
+	font-family: 'Montserrat', sans-serif;
+	background-color: rgb(255, 255, 255);
+	color: #fff;
+}
+
+div {
+	width: 500px;
+	height: 200px;
+}

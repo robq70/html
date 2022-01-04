@@ -1,0 +1,68 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: #fff;
+  background-color: #333;
+  margin: 30px;
+}
+
+a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+[href] {
+  color: gold;
+}
+
+[href='apple.com'] {
+  color: gold;
+}
+
+[class='test'] {
+  color: hotpink;
+}
+
+p[class='test'] {
+  color: hotpink;
+}
+
+[class*='test'] {
+  color: red;
+}
+
+a[href$='xls']::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  padding-left: 10px;
+  background: url("https://icons.iconarchive.com/icons/benjigarner/softdimension/24/Excel-icon.png") no-repeat;
+}
+
+a[href$='doc']::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  padding-left: 10px;
+  background: url("https://icons.iconarchive.com/icons/benjigarner/softdimension/24/MS-Word-2-icon.png") no-repeat;
+}
+
+a[href$='pdf']::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  padding-left: 10px;
+  background: url("https://icons.iconarchive.com/icons/hopstarter/soft-scraps/24/Adobe-PDF-Document-icon.png") no-repeat;
+}
+/*# sourceMappingURL=style.css.map */

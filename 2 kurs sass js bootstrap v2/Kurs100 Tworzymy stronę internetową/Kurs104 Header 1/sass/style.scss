@@ -1,0 +1,77 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #444;
+	font-family: sans-serif;
+}
+.blue-text {
+	color: $blue-color;
+}
+nav {
+	text-transform: uppercase;
+	a {
+		color: $white-color;
+	}
+	a:hover {
+		color: $blue-color;
+	}
+	.fa-bars {
+		padding: 10px;
+	}
+	.navbar-brand {
+		font-weight: bold;
+	}
+	.active {
+		color: $blue-color;
+	}
+}
+header {
+	color: $white-color;
+
+	h1 {
+		text-transform: uppercase;
+	}
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/ps-mini.jpg');
+		background-size: cover;
+		background-position: center;
+		// podczas przewijania strony obrazek będzie się zwężał
+		background-attachment: fixed;
+		z-index: -1;
+		// z-indexy nadana na obrazku zerowy(jednak tutaj na -1 (tutaj na -2 ze względu na nawigację) aby po zmianach nie przykryć menu nawigazji), cień najmmniejszy, napisy największy
+	}
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -2;
+	}
+	.hero-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 1;
+	}
+}
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url('../img/ps-big.jpg');
+		}
+	}
+}

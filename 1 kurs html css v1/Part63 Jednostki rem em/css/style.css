@@ -1,0 +1,46 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	color: #fff;
+}
+
+/* p {
+	REM odnosi się do tego co zdefiniowaliśmy w html
+	font-size: 2.2rem;
+	Jeżeli ustaliliśmy w html font-size: 10px to jeśli użyjemy jednostki rem 2.2 to liczymy 10*2.2=22px. Standardowo jeśli nie określimy czcionka domyślnie ma 16px co jest trudniejsze do przeliczenia
+} */
+
+/* EM odnosi się bezpośrednio do naszego rodzica w którym zdefiniowliśmy rozmiar fonta */
+.top,
+.bottom {
+	margin-top: 30px;
+	padding: 20px 50px;
+}
+.top {
+	font-size: 40px;
+	background-color: #000;
+}
+.one {
+	font-size: 1em;
+}
+.two {
+	font-size: 2em;
+}
+.bottom {
+	font-size: 30px;
+}
+.first {
+	font-size: 2em;
+}
+.second {
+	font-size: 2em;
+}

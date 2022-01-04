@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+}
+h1 {
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+section {
+	width: 50%;
+	margin: 150px auto;
+	padding: 20px;
+	background-color: #ddd;
+}
+img {
+	padding: 20px;
+	/* 
+	Powoduje że tekst opływa zdjęcie z prawej lub lewej strony.
+	Float możemy użyć ewntualnie w takim przypadku w jakiejś sekcji z newsem a przytworzeniu stron gdzie mamy header, nav, main, aside i footer nie należy stosować float bo komplikuje on układ naszej strony używamy do tego flex-boxa i grida.
+	float: left;
+	float: right; */
+}
+header {
+	height: 150px;
+	background-color: gold;
+}
+nav {
+	height: 100px;
+	background-color: tomato;
+}
+main {
+	height: 300px;
+	width: 70%;
+	background-color: greenyellow;
+}
+aside {
+	height: 300px;
+	width: 30%;
+	background-color: royalblue;
+}
+footer {
+	height: 100px;
+	background-color: #000;
+}

@@ -1,0 +1,80 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 15px;
+}
+
+div {
+	position: absolute;
+	line-height: 60px;
+	text-align: center;
+	height: 60px;
+	border: 2px solid rgb(0, 0, 0);
+}
+.square2 {
+	width: 300px;
+}
+
+.long {
+	width: 800px;
+	top: 50px;
+	left: calc(50% - 400px);
+	background-color: tomato;
+	transition: transform 0.3s, width 0.3s;
+}
+.short {
+	top: 180px;
+	left: calc(50% - 150px);
+	background-color: royalblue;
+	border-radius: 25px;
+	transition: transform linear 1s;
+}
+.short2,
+.short3 {
+	top: 300px;
+	border-radius: 10px;
+}
+.short2 {
+	left: calc(30% - 150px);
+	background-color: gold;
+	transition: transform 1s 1s ease-out;
+}
+.short3 {
+	left: calc(70% - 150px);
+	background-color: greenyellow;
+	transition: transform 1s 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.transform {
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 200px;
+	line-height: 200px;
+	transform: translate(-50%, -50%);
+	background-color: transparent;
+	transition: background-color 0.3s;
+}
+.long:hover {
+	transform: scale(2);
+	width: 400px;
+	left: calc(50% - 200px);
+	background-color: yellow;
+}
+.short:hover {
+	transform: rotate(360deg);
+}
+.short:hover ~ .short2 {
+	transform: rotate(360deg);
+}
+.short:hover ~ .short3 {
+	transform: rotate(-360deg);
+}
+.transform:hover {
+	background-color: #fff;
+}

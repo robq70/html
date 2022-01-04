@@ -1,0 +1,174 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+}
+/* Nasza nawigacja */
+.nav {
+	height: 50px;
+	background-color: #333;
+	text-align: center;
+	line-height: 50px;
+	font-size: 0;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a {
+	padding: 0 50px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 2px;
+	/* background-color: gold; */
+	transition: color 0.3;
+}
+.nav-item a:hover {
+	color: #0086f3;
+}
+/* Nasz header */
+.header-img {
+	position: relative;
+	height: 300px;
+	background-image: url('../img/planets-g94b164bf2_1920.jpg');
+	background-size: cover;
+	background-position: 0 50%;
+}
+.header-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	z-index: 5; /*Aby tekst był przed obrazkiem - jest widoczny ale nie można go zaznaczyć, można też w html przenieść div z header-bg wyżej ponad text aby był on czytany na stronie przed tekstem  */
+}
+.header-text h1 {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.header-bg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 3, 27, 0.4);
+	/* Dzięki background-color i kanałowi alpha możemy w przyszłości zmieniąć odcień obrazka w zależności od okoliczności */
+}
+
+/* Nasz main */
+main {
+	margin: 50px auto;
+	width: 1200px;
+}
+main h2 {
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.about-us-box {
+	position: relative;
+	height: 300px;
+	margin: 40px 0;
+	background-attachment: fixed;
+	background-position: center;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	overflow: hidden; /*Jeżeli coś wycieka poza zadeklarowany obszar np. w .about-us-bg tło poza zaokrąglone krawędzie*/
+}
+
+.top {
+	background-image: url(../img/coffee-g992cfd477_1920.jpg);
+}
+.middle {
+	background-image: url(../img/waterfalls-gd81c87f8b_1920.jpg);
+}
+.bottom {
+	background-image: url(../img/office-g0ae9c7cec_1920.jpg);
+}
+
+.about-us-bg {
+	position: absolute;
+	bottom: 0;
+	height: 45%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 8);
+}
+.about-us-text {
+	position: absolute;
+	bottom: 20px;
+	padding: 20px 40px;
+	text-align: center;
+	color: #fff;
+}
+.about-us-text h3 {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+/* Podstrona usługi */
+.services-list {
+	margin: 0 auto;
+	width: 300px;
+	/* lista li jest blokowa można to zobaczyć dając np. background-color: red; więc nam się sama nie wyśrodkowuje. Należy zmniejszyć rozmiar bloku poprzez width: 300px; a zmniejszony blok wtedy wyrówna się do środka*/
+}
+
+/*Podstrona cennik*/
+table,
+td,
+th {
+	margin: 0 auto;
+	border: 1px solid black;
+}
+
+td,
+th {
+	padding: 5px 20px;
+}
+
+thead {
+	background-color: tomato;
+}
+
+tbody {
+	background-color: #fff;
+}
+
+tfoot {
+	background-color: royalblue;
+}
+/*Podstrona kontakt*/
+.contact-info {
+	text-align: center;
+	font-size: 34px;
+}
+.fab {
+	margin-right: 10px;
+}
+/* Nasz footer */
+footer {
+	height: 80px;
+	line-height: 80px;
+	/*Biały pasek na dole strony jest ze względu na wyśrodkowanie poprzez line-height - można je zmniejszyć i wtedy to zniknie ale do wyśrodkowania i tak będzimy używać flex-box*/
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+}
+.icon-box {
+	margin-left: 20px;
+}
+.icon-box a {
+	margin: 0 5px;
+	color: #fff;
+	font-size: 30px;
+	transition: color 0.3s;
+}
+.icon-box a:hover {
+	color: #0086f3;
+}

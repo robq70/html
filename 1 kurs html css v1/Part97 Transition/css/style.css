@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 50px;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 36px;
+}
+.square {
+	position: absolute;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	transform: translateX(-50%);
+	background-color: rgb(0, 153, 255);
+	border: 2px solid rgb(0, 153, 255);
+	box-shadow: 0 0 15px rgb(0, 153, 255);
+	border-radius: 25px;
+
+	transition: all 0s ease 0s;
+	/* 
+	Odwołujemy się bezpośrednio tylko do tych elementów
+	transition: bacground-color .3s, box-shadow .3s; */
+	/* 
+	powyżej zastępuje te wszystkie:
+	transition-property: all;
+	transition-duration: 0s;
+	działa w obie strony czyli np. przy 5s pojawienie się animacji 5s i wygaszenie 5s
+	transition-timing-function: ease;
+	transition-delay: 0s; */
+}
+.square:hover {
+	background-color: rgb(255, 0, 255);
+	box-shadow: 0 0 15px rgb(255, 0, 255);
+}
+.one {
+	top: 15%;
+	transition: width 1s;
+	/* transition nadajemy na obiekcie animowanym a nie na hoover */
+}
+/* .one {
+	top: 15%;
+	transition: width 1s, height 2s;
+}
+.one:hover {
+	width: 350px;
+	height: 350px;
+} */
+.two {
+	top: 40%;
+	transition: width 1s 1s;
+	/* transition nadajemy na obiekcie animowanym a nie na hoover */
+}
+.three {
+	top: 65%;
+	transition: width 1s 2s;
+	/* transition nadajemy na obiekcie animowanym a nie na hoover */
+}
+
+.one:hover {
+	width: 350px;
+}
+.one:hover ~ .two {
+	width: 350px;
+}
+.one:hover ~ .three {
+	width: 350px;
+}

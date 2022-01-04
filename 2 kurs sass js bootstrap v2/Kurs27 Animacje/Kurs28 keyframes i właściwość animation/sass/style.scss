@@ -1,0 +1,60 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	color: #fff;
+	background-color: #333;
+}
+
+.square {
+	height: 400px;
+	width: 400px;
+	background-color: gold;
+	border: 3px solid black;
+	animation: color 2s cubic-bezier(0.165, 0.84, 0.44, 1) 2s infinite;
+	// // animacja nazwa animacji, trwa 1s cubic-bezier, 2s opóźnienia, 3 razy się wykonuje (infinite - bez końca). Można się odwoływać osobno do każdego np. animation-direction.
+	animation-direction: alternate;
+}
+.square:hover {
+	animation-play-state: paused;
+	//kiedy najedziemy myszką na animację ona się zatrzyma
+}
+.two {
+	animation-direction: reverse;
+}
+
+// animation: NAZWA / CZAS / TIMING-FUNCTION / DELAY / IL. POWTORZEN / FILL MODE
+@keyframes color {
+	0% {
+		width: 400px;
+		background-color: gold;
+	}
+	20% {
+		width: 500px;
+		background-color: pink;
+	}
+	40% {
+		width: 600px;
+		background-color: royalblue;
+	}
+	60% {
+		width: 700px;
+		background-color: violet;
+	}
+	80% {
+		width: 600px;
+		background-color: blueviolet;
+	}
+
+	100% {
+		width: 400px;
+		background-color: lime;
+	}
+
+	//Jeśli mamy tylko 2 breakpointy to zamiast 0% - 100% możemy użyć from - to
+}

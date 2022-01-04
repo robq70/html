@@ -1,0 +1,35 @@
+// Tworzenie mapy
+// $nazwa-mapy ( zmienna1: wartosc, zmienna2:wartosc);
+// Odwolanie do zmiennej np. .item1 {background-color: map-get($colors, top);
+$colors: (
+	top: royalblue,
+	center: lime,
+	bottom: tomato,
+);
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #333;
+	font-family: sans-serif;
+}
+
+.square {
+	margin: 50px;
+	width: 200px;
+	height: 200px;
+	border: 1px solid #333;
+}
+.item1 {
+	background-color: map-get($colors, top);
+}
+.item2 {
+	background-color: map-get($colors, center);
+}
+.item3 {
+	background-color: map-get($colors, bottom);
+}

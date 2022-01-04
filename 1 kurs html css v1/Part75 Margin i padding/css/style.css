@@ -1,0 +1,48 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 36px;
+}
+.square {
+	display: inline-block;
+	width: 300px;
+	height: 300px;
+	border: 10px solid black;
+	margin: 30px;
+	padding: 20px 30px 40px 50px;
+
+	/* 
+	padding: 20px; oznacza że wszystkie strony mają 20px - TRBL
+	padding: 20px 30px; oznacza że góra dół będzie 20px a prawo lewo 30px TB/RL
+	
+	padding: 20px 30px; 40px oznacza że góra to 20px prawo i lewo 30px a dół 40px T/RL/B
+	
+	padding: 20px 30px 40px 50px; oznacza że góra będzie 20px prawo 30 lewo 40 a dół 50px T/R/B/L
+	*/
+	/* Marginesy góra dół przy np. dwóch obiektach pod sobą nie sumują się czyli odległóść pomiedzy dwoma square będzie 30px a nie 60px 
+	Marginesy przy obiektach w jednej linii po bokach się sumują czyli bedzie to 60px
+	Zasada TRouBLe - Top, Right, Bottom, Left
+	*/
+	/* Przy takim układzie w html
+<div class="square content">Content-box</div>
+<div class="square border">Border-box</div>
+i w css
+display: inline-block;
+nasze kwadraty będą obok siebie z marginesem który się sumuje ale będzie to nie 60px tylko ok. 62px 
+Jest to błąd html który wstawia wirtualną spację pomiędzy oddzielonymi enterem dwoma divami.
+Aby było równo 60px musimy umieścić je w jednej linii
+<div xxxx></div><div xxxx></div>
+*/
+}
+.content {
+	background-color: royalblue;
+}
+.border {
+	background-color: lime;
+}

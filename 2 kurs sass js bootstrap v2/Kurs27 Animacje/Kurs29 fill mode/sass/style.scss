@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	color: #fff;
+	background-color: #333;
+}
+.text {
+	position: absolute;
+	right: 20px;
+	line-height: 100px;
+	text-transform: uppercase;
+	border-bottom: 3px solid #000;
+}
+.square {
+	margin-bottom: 5px;
+	width: 50px;
+	height: 100px;
+	background-color: #000;
+	animation: test 2s 2s;
+}
+
+.one {
+	animation-fill-mode: none;
+}
+.two {
+	animation-fill-mode: forwards;
+}
+.three {
+	animation-fill-mode: backwards;
+}
+.four {
+	animation-fill-mode: both;
+}
+
+// animation: NAZWA / CZAS / TIMING-FUNCTION / DELAY / IL. POWTORZEN / FILL MODE
+@keyframes test {
+	0% {
+		width: 50px;
+		background-color: lime;
+	}
+	50% {
+		background-color: royalblue;
+	}
+
+	100% {
+		width: 500px;
+		background-color: tomato;
+	}
+}

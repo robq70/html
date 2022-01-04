@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #444;
+  font-family: sans-serif;
+}
+
+.blue-text {
+  color: #039dff;
+}
+
+nav {
+  text-transform: uppercase;
+}
+
+nav a {
+  color: white;
+}
+
+nav a:hover {
+  color: #039dff;
+}
+
+nav .fa-bars {
+  padding: 10px;
+}
+
+nav .navbar-brand {
+  font-weight: bold;
+}
+
+nav .active {
+  color: #039dff;
+}
+
+header {
+  color: white;
+}
+
+header h1 {
+  text-transform: uppercase;
+}
+
+header .hero-img {
+  position: relative;
+  height: 100vh;
+  background-image: url("../img/ps-mini.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+header .hero-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -2;
+}
+
+header .hero-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+@media (min-width: 1200px) {
+  header .hero-img {
+    background-image: url("../img/ps-big.jpg");
+  }
+}
+/*# sourceMappingURL=style.css.map */

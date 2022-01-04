@@ -1,0 +1,57 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+nav {
+	height: 60px;
+	line-height: 60px;
+	/* Teraz stosujemy line-height ale później będziemy flex-boxa */
+	background-color: #ddd;
+	text-align: center;
+}
+/* wrapper trzyma treść na środku strony w zdefiniowanym kontenerze niezależnie od tego jak szeroki jest monitor. */
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+.burger-icon {
+	display: block;
+	margin-left: auto;
+	padding: 0 30px;
+	line-height: 60px;
+	font-size: 30px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+.burger-icon:hover {
+	color: #fff;
+}
+.nav-items {
+	display: none;
+}
+@media (min-width: 768px) {
+	.burger-icon {
+		display: none;
+	}
+	.nav-items {
+		display: block;
+	}
+}
+.nav-items a {
+	padding: 0 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #333;
+	transition: color 0.3s;
+}
+.nav-items a:hover {
+	color: #09f;
+}

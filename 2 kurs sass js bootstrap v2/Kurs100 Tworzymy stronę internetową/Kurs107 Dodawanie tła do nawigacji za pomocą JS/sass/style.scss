@@ -1,0 +1,121 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #444;
+	font-family: sans-serif;
+}
+.blue-text {
+	color: $blue-color;
+}
+.shadow-bg {
+	// klasa wywoływana dynamicznie poprzez funkcję js aby strona nie nakładała się na nasze menu po przekroczeniu 300px, transition aby przejście było widoczne zarówno podczas dodawania jak i usuwania klasy shadow-bg musimy nadać na naszego nav
+	background-color: rgba(0, 0, 0, 0.8);
+}
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s; // ten transition dotyczy .shadow-bg
+	z-index: 1;
+	a {
+		color: $white-color;
+	}
+	a:hover {
+		color: $blue-color;
+	}
+	.fa-bars {
+		padding: 10px;
+		color: $white-color;
+	}
+	.navbar-brand {
+		font-weight: bold;
+	}
+	.active {
+		color: $blue-color;
+	}
+	
+}
+header {
+	color: $white-color;
+
+	h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+	p {
+		font-size: 14px;
+	}
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/ps-mini.jpg');
+		background-position: center;
+		// podczas przewijania strony obrazek będzie się zwężał
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+		// z-indexy nadana na obrazku zerowy(jednak tutaj na -1 (tutaj na -2 ze względu na nawigację) aby po zmianach nie przykryć menu nawigazji), cień najmmniejszy, napisy największy
+	}
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -1;
+	}
+	.hero-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 2;
+	}
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+	.fa-chevron-down {
+		position: absolute;
+		// left + transform wypozycjonowanie strzałki względem osi X
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 30px;
+		bottom: 20px;
+		color: $white-color;
+	}
+}
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 38px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+@media (min-width: 810px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url('../img/ps-big.jpg');
+		}
+	}
+}

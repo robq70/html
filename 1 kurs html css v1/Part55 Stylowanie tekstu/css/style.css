@@ -1,0 +1,64 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 20px;
+	font-size: 36px;
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	color: #fff;
+	overflow: hidden;
+}
+p {
+	color: gold;
+	/* text-align: left;
+	text-align: right;
+	text-align: center;
+	text-align: justify; */
+	letter-spacing: 2px;
+	word-spacing: 30px;
+	line-height: 300px;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+.small {
+	text-transform: uppercase;
+}
+.big {
+	text-transform: lowercase;
+}
+.text {
+	text-transform: capitalize;
+}
+.text2 {
+	direction: ltr;
+	direction: rtl;
+	/* kierunek tekstu od prawej krawędzi */
+	text-shadow: 5px 5px 5px #000;
+	/* Dodaje cień do tekstu */
+}
+
+div {
+	margin-top: 30px;
+	background-color: royalblue;
+	height: 300px;
+	text-align: center;
+	line-height: 300px;
+}
+
+/* Właściwości dla tekstu:
+
+    color: kolor czcionki
+    text-align: wyrównanie do prawej, lewej, środka itd.
+    text-decoration: podkreślenie, przekreślenie itd.
+    text-transform: zmiana wielkości liter
+    letter-spacing / word-spacing: odstęp pomiędzy literami / wyrazami
+    line-height: wysokość linii, w której jest tekst
+    direction: kierunek tekstu
+    text-shadow: cień */

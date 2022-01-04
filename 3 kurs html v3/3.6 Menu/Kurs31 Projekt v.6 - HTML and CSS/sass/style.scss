@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+	overflow: hidden;
+	color: #fff;
+	background: linear-gradient(10deg, #2483ff 60%, #2c6afb 60%);
+}
+
+nav {
+	margin-top: 100px;
+	background-color: #292929;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	font-size: 24px;
+}
+.menu-item {
+	display: inline-block;
+	height: 100px;
+	width: 300px;
+	line-height: 100px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+.menu-item:hover {
+	background-color: #163636;
+}
+.dropdown {
+	position: absolute;
+	width: 300px;
+}
+
+.dropdown li {
+	display: none; // powoduje, że nasze menu zniknęło
+	opacity: 0; // później do animacji
+	background-color: #50515a;
+	transition: color 0.3s;
+}
+.dropdown li:hover {
+	color: royalblue;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nestlan</title>
+		<link rel="preconnect" href="https //fonts.gstatic.com" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=montserrat:wght100;400;700&display=swap"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/4fe226548b.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<!-- pseudoklasa :firstchild, :lastchild - W body pierwszym dzieckiem jest <div> dlatego pierwszy <p> w div zostanie pokolorowany  -->
+		<div>
+			<p>Lorem ipsum dolor sit amet.</p>
+			<p>Excepturi, beatae animi? Doloribus, corporis.</p>
+			<p>Necessitatibus repellendus officia animi non.</p>
+			<p>In enim dignissimos explicabo quaerat!</p>
+			<p>Eius nisi veritatis laboriosam enim?</p>
+		</div>
+		<!-- W body p jest drugim dzieckiem więc nie jest pokolorowane -->
+		<p>Lorem, ipsum dolor.</p>
+		<p>Nobis, totam vitae!</p>
+		<p>Nobis, error accusamus.</p>
+		<div>
+			<!-- pierwsze <p> w div jest pierwszym dzieckiem więc zostanie pokolorowane -->
+			<p>Lorem ipsum dolor sit amet.</p>
+			<p>Veniam possimus ducimus fugit assumenda?</p>
+			<p>Autem maxime nemo commodi exercitationem?</p>
+			<p>Doloribus odio laudantium porro ex.</p>
+			<!-- Jeśli przesuniemy paragraf przed pierwszy lub poza ostatni div to zostanie pokolorowany.
+			!!!! Uwaga ostatni poprzez Live serwer może nie być widoczny ponieważ serwer dodaje sobie własny kod w przeglądarce. Można to sprawdzić w przeglądarce w przegladzie kodu lub otworzyć plik html bezpośrednio -->
+			<p>Tenetur maxime libero illo iste.</p>
+		</div>
+	</body>
+</html>
