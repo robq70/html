@@ -1,0 +1,58 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+	color: gray;
+}
+.form {
+	width: 400px;
+	border: 1px solid black;
+	border-radius: 8px;
+	overflow: hidden;
+	&__body {
+		padding: 10px 20px;
+	}
+	&__box {
+		margin: 20px 0;
+		padding: 10px 20px;
+	}
+	&__title {
+		margin: 20px 0;
+		font-size: 48px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	&__label {
+		font-size: 25px;
+	}
+	&__btns {
+		display: flex;
+		justify-content: space-around;
+		padding: 10px 0;
+	}
+	&__btn {
+		padding: 10px 20px;
+		border: 1px solid black;
+		border-radius: 8px;
+		cursor: pointer;
+
+		&--highlight {
+			background-color: rgb(33, 218, 132);
+		}
+	}
+}
+input[type='text'] {
+	border-radius: 10px;
+	color: #a0d18c;
+	width: 100%;
+	height: 40px;
+	padding-left: 10px;
+}
