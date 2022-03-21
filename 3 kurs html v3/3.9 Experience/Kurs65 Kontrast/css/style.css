@@ -1,0 +1,55 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+  color: gray;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid black;
+  width: 700px;
+  height: 300px;
+}
+
+div button {
+  width: 200px;
+  padding: 10px 10px;
+  margin: 20px 20px;
+  font-size: 2rem;
+}
+
+div .btn1 {
+  background-color: lime;
+  color: gray;
+}
+
+div .btn2 {
+  background-color: blue;
+  color: green;
+}
+/*# sourceMappingURL=style.css.map */

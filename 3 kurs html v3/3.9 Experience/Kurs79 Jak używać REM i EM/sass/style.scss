@@ -1,0 +1,34 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	font-family: sans-serif;
+	background-color: #333333;
+	// color: #ffffff;
+}
+.box {
+	padding: 10px 20px;
+	margin-bottom: 30px;
+	font-size: 36px;
+	background-color: rgb(226, 226, 226);
+}
+button {
+	// Przy zmianie wyświetalnia jeśli w paddingu ustawimy aby dziedziczył to on również zwiększy nam pole do oddychania dla button 
+	padding: .5em 1em;
+	// dla font-size używamy rem
+	font-size: 2.4rem;
+	color: #dddddd;
+	border: 3px solid #dddddd;
+	background: none;
+	cursor: pointer;
+}

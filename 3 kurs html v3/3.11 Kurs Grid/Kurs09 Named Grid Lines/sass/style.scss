@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
+body {
+	margin: 50px;
+	height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #333;
+	font-size: 3.6rem;
+}
+
+.wrapper {
+	margin: 50px;
+	display: grid;
+	// grid-template-columns: repeat(3, 1fr);
+	// Jeśli chcemy zamiast do cyfr odnosić się do nazw poszczególnych linii to musimy je nazwać. Nie możemy używać nazw zastrzeżonych dla języka html i css. Linia może mieć kilka nazw
+	grid-template-columns: [ala ula] 1fr [bela] 1fr [maja] 1fr [zuza];
+	grid-template-rows: repeat(3, 1fr);
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	border: 1px solid black;
+}
+
+.one {
+	background-color: teal !important;
+	// odwołanie do linii za pomocą zdefiniowanych nazw
+	grid-column: ala / maja;
+}
+
+.blue {
+	background-color: cornflowerblue;
+}
+
+.purple {
+	background-color: slateblue;
+}
+
+.green {
+	background-color: greenyellow;
+}
+.gold {
+	background-color: gold;
+}

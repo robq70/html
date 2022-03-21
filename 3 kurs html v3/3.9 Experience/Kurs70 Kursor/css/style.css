@@ -1,0 +1,58 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 100%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.square {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 600px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+
+.square .sqr-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.square button {
+  margin: 20px;
+  border: 1px solid #000000;
+  background-color: #10b433;
+  color: #000000;
+  font-size: 2rem;
+  padding: 15px 30px;
+}
+
+.square button:hover {
+  cursor: pointer;
+}
+
+.square .btn2 {
+  border-radius: 20px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 50px;
+	color: #ffffff;
+	height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #333;
+	font-size: 3.6rem;
+}
+
+.wrapper {
+	display: grid;
+	color: #000000;
+}
+.auto-fit {
+	// Na całej stronie będziemy mieli max ilość kolumnm czyli powyżej 1200px. Poniżej 1200px jedna kolumna przeskoczy nam do kolejnego wiersza czyli 5/1 poniżej 1000px 4/2 poniżej 800px 3/3 poniżej 600 px stworzy sie nam kolejny wiersz i będzie 2/2/2 a poniżej 400 px stworzy się nam tylko 1 kolumna z 6 wierszami. Przy 1fr kolumny będą się nam rozszerzać ale jeśli damy max 300px to po osiągnięciu tej granicy nam się zatrzymają
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.auto-fill {
+	// Działa podobnie jak auto-fit ale w miarę rozszerzania się strony powyżej 1400px doda nam na końcu pustą kolumne 200px nie rozszerzając pozostałych, powyżej 1600px będziemy mieć po prawej stronie już 2 puste kolumny po 200px.
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+h3 {
+	margin: 2em 0 0.5em;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	border: 1px solid black;
+}
+
+.blue {
+	background-color: cornflowerblue;
+}
+
+.purple {
+	background-color: slateblue;
+}
+
+.green {
+	background-color: greenyellow;
+}
+
+.gold {
+	background-color: gold;
+}

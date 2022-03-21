@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #333;
+	font-size: 3.6rem;
+}
+
+.grid-container {
+	// margin: 50px;
+	// dodanie display grid nie powoduje widocznej zmiany ale jeśli nadamy np. wysokość 100vh to elementy wewnątrz przydzielą sobie po równo rozmiar całej strony
+	// jeśli nadamy wysokość 900px a dla wierszy odpowiednio 1fr 2fr to pierwszy i drugi przyjmie proporcjonalnie wartość względem wysokości strony
+	display: grid;
+
+	// układająć w ten sposób stworzymy 3 kolumny a elementy w kolejności ułożą się w wiersze. Ponieważ są to % strona jest responsywna
+	grid-template-columns: 20% 20% 30%;
+
+	// fr - frakcje powodują że jeśli damy 1fr to mamy kolumnę na cały obszar jeśli damy 1fr 3fr to mamy dwie kolumny z których druga ma rozmiar 3x wiekszy od pierwszej
+	grid-template-columns: 1fr 3fr;
+
+	// jeśli chcemy kilka takich samych kolumn to nie musimy powtarzać rozmiaru dla każdej z nich tylko zastosować repeat()
+	grid-template-columns: repeat(5, 2fr);
+
+	// w poniższym przykładzie będziemy mieli 5 kolumn naprzemiennie 2fr 1fr 2fr 1fr 2fr
+	grid-template-columns: repeat(5, 2fr 1fr);
+
+	// w kolejnym przykładzie mamy 5 kolumn - 2fr 2fr 2fr 2fr 5fr
+	grid-template-columns: repeat(4, 2fr) 5fr;
+	// -------------------------------------------------------------
+	grid-template-columns: repeat(3, 1fr);
+	// grid rows nadaje nam wysokość na wierszach. Jeśli nie nadamy wysokości ma grid container to przyjmie sobie domyślnie jakieś wartości
+	// Ogólnie stosuje się to wszytsko co przy kolumnach czyli repeat także
+	grid-template-rows: 2fr 1fr;
+
+	// grid-gap stary nie stosowany zapis teraz mamy samo gap które dodaje nam marginesy pomiędzy wierszami i kolumnami
+	// poniższy zapis to skrócony jednocześnie  dla row-gap i column-gap i nadaje od razu nam 10px pomiędzy wierszami i 100px pomiędzy kolumnami
+	gap: 10px 100px;
+}
+
+.grid-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #297ddf;
+	border: 3px solid black;
+}
+
+.grid-item:nth-child(even) {
+	background-color: #34e559;
+}

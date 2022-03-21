@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 50px;
+	height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #333;
+	font-size: 3.6rem;
+}
+
+.wrapper {
+	margin: 50px;
+	display: grid;
+	// ustalamy max szerokość kolumn na 1fr ale po osiągnięciu 200px kolumny przestaną być responsywne i zmieniać szerokość
+	grid-template-columns: repeat(4, minmax(200px, 1fr));
+	// po ustaleniu tych wartości po osiągnięciu max 300px elementy przestaną się rozciągać na całej stronie
+	grid-template-columns: repeat(4, minmax(200px, 300px));
+	grid-template-rows: repeat(3, 1fr);
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	border: 1px solid black;
+}
+
+.blue {
+	background-color: cornflowerblue;
+}
+
+.purple {
+	background-color: slateblue;
+}
+
+.green {
+	background-color: greenyellow;
+}
+.gold {
+	background-color: gold;
+}

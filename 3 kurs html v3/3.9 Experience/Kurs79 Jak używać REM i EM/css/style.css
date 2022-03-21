@@ -1,0 +1,46 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: #333333;
+}
+
+.box {
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  font-size: 36px;
+  background-color: #e2e2e2;
+}
+
+button {
+  padding: .5em 1em;
+  font-size: 2.4rem;
+  color: #dddddd;
+  border: 3px solid #dddddd;
+  background: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

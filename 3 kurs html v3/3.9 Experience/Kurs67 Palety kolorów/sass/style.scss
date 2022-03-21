@@ -1,0 +1,107 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 100%;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #264653;
+}
+section {
+	display: flex;
+	margin: 20px 0;
+	background-color: #2a9d8f;
+	display: flex;
+}
+button {
+	width: 300px;
+	padding: 10px 10px;
+	margin: 30px 30px;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+.section1 {
+	justify-content: center;
+	div {
+		width: 700px;
+		color: #264653;
+		padding: 20px 20px;
+		h1 {
+			padding: 10px 10px;
+			margin: 10px;
+			font-size: 3rem;
+			text-align: center;
+		}
+		p {
+			padding: 10px 10px;
+			font-size: 1.5rem;
+			text-align: justify;
+		}
+		.btn1 {
+			background-color: #264653;
+			color: #e9c46a;
+		}
+	}
+}
+.section2 {
+	padding: 40px;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	.square {
+		padding: 20px;
+		width: 600px;
+		height: 600px;
+		text-align: center;
+	}
+	h1 {
+		padding: 10px;
+		font-size: 3rem;
+		color: #e63946;
+	}
+	p {
+		padding: 10px;
+		font-size: 1.5rem;
+	}
+
+	.one {
+		background-color: #1d3557;
+		color: #f1faee;
+		.btn-one {
+			background-color: #f1faee;
+			color: #1d3557;
+			border: transparent;
+		}
+	}
+
+	.two {
+		background-color: #457b9d;
+		color: #f1faee;
+		.btn-two {
+			background-color: #f1faee;
+			color: #e63946;
+			border: 1px solid #1d3557;
+		}
+	}
+
+	.three {
+		background-color: #a8dadc;
+		color: #1d3557;
+		.btn-three {
+			background-color: #f1faee;
+			color: #1d3557;
+		}
+	}
+
+	.four {
+		background-color: #f1faee;
+		color: #1d3557;
+		.btn-four {
+			background-color: #e63946;
+			color: #f1faee;
+			border: 1px solid #1d3557;
+		}
+	}
+}

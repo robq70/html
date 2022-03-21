@@ -1,0 +1,59 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 50px;
+	color: #ffffff;
+	height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #333;
+	font-size: 3.6rem;
+}
+
+// https://css-tricks.com/the-auto-flowing-powers-of-grids-dense-keyword/
+// https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow
+
+.wrapper {
+	display: grid;
+	color: #000000;
+	// grid-template-columns: 200px 200px;
+	// grid-template-rows: 200px 200px;
+	gap: 5px;
+	// na początku w html zakomentowane mamy div od 5-12. Parametr grid-auto-flow: column; daje nam układ normalny czyli układa nam wiersz 1,2 drugi wiersz 3,4 z kolei grid-auto-flow: row; spowoduje że elementy ułożą się kolumnami czyli w wierszu pierwszym będzie 1,3 a drugim 2,4
+	// grid-auto-flow: row;
+	grid-auto-flow: column;
+	// Po zwiększeniu ilości div do 12 elementy column będą się nam układały w prawo w dwóch wierszach a przy row w dół w dwóch kolumnach przy czym tylko 2 kolumny i 2 wiersze przyjmą zadeklarowane wymoiar 200px x 200px. W takim przepadku możemy sobie zadeklarować jeśli np nie wiemy ile będziemy mieć elementów aby przyjmowały one wszystkie domyślnie wielkość 200px. Czyli dla wierszy pozostawiamy aktywne oraz grid-auto-flow: row; i grid-auto-rows: 200px;. Przy kolumnach zostawiamy grid-auto-flow: column; i grid-auto-columns: 200px;
+	// grid-auto-rows: 200px; A grid-template-rows lub columns: 200px 200px; mogą być nieaktywne
+	// grid-auto-flow:  row dense; ten parametr użyteczny jest np przy zdjęciach różnej wielkości na stronie. Samo row jeśli np mamy 3 zdjęcia o szerokości 300px 300px 200px po zmniejszeniu strony poniżej 600px ustawi nam w pierwszym wierszu 1 zdjęcie a w drugim 2 i 3. Dense mówi że jeżeli kolejne zdjęcie zmieści się po pierwszym to nieważna jest kolejność tylko układ na stronie więc będzie 1 i 3 zdjęcie a później 2 zdjęcie
+	grid-auto-columns: 200px;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	border: 1px solid black;
+}
+
+.blue {
+	background-color: cornflowerblue;
+}
+
+.purple {
+	background-color: slateblue;
+}
+
+.green {
+	background-color: greenyellow;
+}
+
+.gold {
+	background-color: gold;
+}

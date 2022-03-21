@@ -1,0 +1,32 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #444;
+	font-family: sans-serif;
+}
+nav {
+	text-transform: uppercase;
+	a {
+		color: $white-color;
+	}
+	a:hover {
+		color: $blue-color;
+	}
+	.fa-bars {
+		padding: 10px;
+	}
+	.navbar-brand {
+		font-weight: bold;
+	}
+	.active {
+		color: $blue-color;
+	}
+}

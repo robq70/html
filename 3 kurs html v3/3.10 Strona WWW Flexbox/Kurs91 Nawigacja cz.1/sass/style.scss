@@ -1,0 +1,185 @@
+// pliki w nazwie mają mieć dwa podkreślenia !!!
+@import '__colors';
+@import '__components';
+@import '__mixins';
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.6rem;
+	// font-family: 'Dancing Script', cursive;
+}
+// ***********************************************
+// NAV
+// ***********************************************
+
+// Nawigacja strony burger icon
+.burger-btn {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 1em;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1000;
+	&:focus {
+		// do każdego elementu input, którego cechy w danym momencie spełniają zasadę pseudoklasy :focus dodaj właściwość CSS, która zmieni:
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		// W tym samym dokumencie HTML w tym samym momencie maksymalnie tylko jeden element HTML może spełniać zasadę pseudoklasy ":focus".
+	}
+	&:hover {
+		// po najechaniu na burgera kreski zwiększają się do 100%
+		.burger-btn__bars::after,
+		.burger-btn__bars::before {
+			width: 100%;
+		}
+	}
+	&__box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+	// odwołanie do kresek w burger
+	&__bars,
+	&__bars::after,
+	&__bars::before {
+		// dodanie @mixin z pliku scss
+		@include burgerBtn;
+	}
+	&__bars {
+		width: 100%;
+		&::after {
+			top: 13px;
+			width: 60%;
+		}
+		&::before {
+			top: 27px;
+			width: 30%;
+			// aby opóźnić wyświetlenie dolnej kreski burgera
+			transition-delay: 0.1s;
+		}
+	}
+}
+
+// Nawigacja menu
+.nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-image: $blue-gradient-solid;
+	z-index: 100;
+	&__item {
+		position: relative;
+		display: block;
+		margin: 0.5em 0;
+		padding: 0.5em 2em;
+		font-size: 2.8rem;
+		color: $pure-white;
+		text-decoration: none;
+		&::before {
+			// pozycjonowanie kresek względem elementów
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			// aby się nam animowało na transformie na początku dajemy wartość 0 a powiększamy później na hover
+			transform: scaleY(0);
+			background-color: $pure-white;
+			transition: transform 0.3s;
+			content: '';
+		}
+		&:hover::before {
+			transform: scaleY(1);
+		}
+	}
+}
+
+// ***********************************************
+// HEADER
+// ***********************************************
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	height: 75vh;
+	text-align: center;
+	color: $pure-white;
+	// dodanie parametrów z @mixin heroImages
+	@include heroImages('../img/palm-mini.jpg');
+	background-attachment: scroll;
+	&__heading {
+		font-family: 'Dancing Script', cursive;
+		font-size: 4.8rem;
+		font-weight: 300;
+	}
+	&__text {
+		font-size: 1.4rem;
+	}
+	&__btn {
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		font-size: 1.4rem;
+		background-color: $pure-white;
+		border: none;
+		border-radius: 8px;
+		color: $dark;
+		text-decoration: none;
+		text-transform: uppercase;
+		cursor: pointer;
+		&::before {
+			background-color: $light-white;
+		}
+	}
+}
+// ***********************************************
+// MEDIA
+// ***********************************************
+@media (min-width: 768px) {
+	.white-block {
+		height: 50px;
+		width: 45%;
+	}
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+		&__text {
+			font-size: 2.2rem;
+		}
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+}
+@media (min-width: 993px) {
+	.burger-btn {
+		top: 50px;
+		right: 5px;
+	}
+	.header {
+		// nie dodajemy tutaj include żeby nie nadpisywać wartości tylko to co się zmieni czyli background-image: w którym powtarzamy tylko gradient i zmieniamy wielkość obrazka.
+		background-image: $blue-gradient url('../img/palm-big.jpg');
+		&__heading {
+			font-size: 10rem;
+		}
+	}
+}

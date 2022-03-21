@@ -1,0 +1,3 @@
+Burger button to element nawigacji, a więc powinien on się znaleźć w tagach nav.
+
+W następnym odcinku z jakiegoś powodu zrobiłem go poza nawigacją. Także to takie info na przyszłość.

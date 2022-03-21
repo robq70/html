@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 100%;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.image {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	img {
+		transition: transform 0.3s;
+		margin: 10px;
+		// taki kursor używamy jeżeli coś powiększamy najlepiej jeśli nie jest to hover ale np po kliknięciu lub zdjęcie wewnątrz ramki
+		cursor: zoom-in;
+		width: 50%;
+		height: 50%;
+	}
+	img:hover {
+		transform: scale(2);
+	}
+}

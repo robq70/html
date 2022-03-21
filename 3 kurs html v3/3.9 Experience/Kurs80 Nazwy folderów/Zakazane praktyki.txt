@@ -1,0 +1,24 @@
+Zakazane praktyki:
+
+    nazywanie folderów wielkimi literami, np. [ IMG ], [ JS ], [ CSS ],
+    używanie polskich znaków w nazwach folderów, np. [ jakiś folder ],
+    używanie spacji w nazwach folderów, np. [ java script ].
+
+
+Ad. 1.
+
+Wszystko w kodzie piszemy małymi literami, więc i foldery powinniśmy nazywać małym literami. Wygląda to wtedy dobrze i profesjonalnie.
+
+
+Ad. 2.
+
+Przeglądarki mogą nie poradzić sobie z odczytaniem ścieżki do pliku z polskimi znakami.
+
+Np. literę ś w <img src="jakiś_folder" alt=""> mogą zastąpić jakimiś "krzakami" i obrazek się nie podlinkuje.
+
+
+Ad. 3.
+
+Podobnie jak w przypadku Ad. 2, spacje mogą zostać błędnie odczytane przez przeglądarkę, co może prowadzić do błędnego wyczytywania się grafik, stylów, skryptów itd.
+
+Jeśli już musimy z jakiegoś szalenie konkretnego powodu nazwać folder więcej niż jednym wyrazem, skorzystajmy z "podłogi" np. [ nowy_folder ].

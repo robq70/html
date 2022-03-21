@@ -1,0 +1,23 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-size: 100%;
+}
+.square {
+	display: flex;
+	text-align: left;
+	.sqr-new {
+		width: 250px;
+		height: 100px;
+		background-color: rgb(98, 197, 181);
+		margin: 10px;
+	}
+}

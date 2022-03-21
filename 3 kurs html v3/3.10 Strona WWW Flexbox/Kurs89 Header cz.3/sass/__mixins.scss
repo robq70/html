@@ -1,0 +1,17 @@
+@mixin burgerBtn {
+	position: absolute;
+	right: 0;
+	height: 3px;
+	// pseudoelementy muszą mieć content nawet puste
+	content: '';
+	background-color: $pure-white;
+	// Kolor red nadano żeby zobaczyć coś w tej chwili na stronie
+	// background-color: red;
+	transition: width 0.3s;
+}
+@mixin heroImages($bgImg) {
+	background-image: $blue-gradient, url($bgImg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
