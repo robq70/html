@@ -1,0 +1,191 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+	/* powoduje że przewijanie stron odbywa się w sposób łagodny */
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+/* KLASY wspólne */
+.wrapper {
+	/* używamy do utrzymywania całej naszej strony na środku */
+	margin: 0 auto; /* od góry i dołu bez marginesu i wyśrodkowana*/
+	width: 100%;
+	max-width: 1200px; /* od1200-1400 max szerokość wrappera*/
+}
+.hero-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.hero-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+.hero-text h1 {
+	margin-bottom: 5px;
+	text-shadow: 3px 3px 5px #000;
+	color: #ddd;
+}
+.hero-text span {
+	text-transform: uppercase;
+	color: #09f;
+}
+
+.section-title {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+}
+/* NAWIGACJA */
+section {
+	scroll-margin-top: 80px; /* po kliknięciu na nawigację belka z menu zakrywa nam górę sekcji dlatego musimy o tym przeglądarkę poinformować  */
+}
+nav {
+	position: sticky;
+	top: 0;
+	height: 60px;
+	line-height: 60px;
+	/* później do wysokości i wyśrodkowania używamy flexboxa */
+	background-color: #ddd;
+	text-align: center;
+	z-index: 10;
+}
+.burger-icon {
+	display: block; /* aby zadziałał margin musimy obiekt liniowy zamienić na blokowy*/
+	margin-left: auto;
+	padding: 0 30px;
+	line-height: 60px;
+	font-size: 30px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+.nav-items {
+	display: none;
+	/* nawigacje na komputery ukrywamy ponieważ będzie widoczna dopiero po przekroczeniu breakpointa w @media */
+}
+
+/* HEADER */
+.header {
+	position: relative;
+	background-image: url('../img/hero-small.jpg');
+	height: 330px;
+	background-size: cover;
+	background-position: center;
+}
+
+/* MAIN */
+
+main {
+	margin: 60px 0;
+}
+.about-us-info {
+	margin-bottom: 10px;
+	padding: 0 20px;
+}
+.products {
+	margin: 60px auto;
+}
+.product {
+	position: relative;
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+}
+.product:hover h3 {
+	transform: scale(1.6);
+}
+/* product:hover h3 oznacza że powiększy się nam tekst ale nie po najechaniu na niego tylko na kartę */
+.product h3 {
+	text-transform: uppercase;
+	transition: transform 0.3s;
+}
+
+.first-product {
+	background-image: url('../img/children-small.jpg');
+}
+.second-product {
+	background-image: url('../img/keyboard-small.jpg');
+}
+.third-product {
+	background-image: url('../img/woman-small.jpg');
+}
+.fourth-product {
+	background-image: url('../img/laptop-small.jpg');
+}
+
+/* KONTAKT */
+.contact {
+	text-align: center;
+}
+.contact h3 {
+	margin: 20px 0 5px;
+	text-transform: uppercase;
+}
+/* footer */
+footer {
+	padding: 30px 10px;
+	text-align: center;
+	background-color: #ddd;
+}
+
+@media (min-width: 768px) {
+	.burger-icon {
+		display: none;
+	}
+	.nav-items {
+		display: block;
+	}
+	.nav-items a {
+		padding: 0 30px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #333;
+		transition: color 0.3s;
+	}
+	.nav-items a:hover {
+		color: #09f;
+	}
+	.header {
+		background-image: url('../img/hero-big.jpg');
+		height: 400px;
+	}
+	.hero-text h1 {
+		font-size: 36px;
+	}
+	.hero-text span {
+		font-size: 18px;
+	}
+	.products h3 {
+		font-size: 24px;
+	}
+}
+@media (min-width: 992px) {
+	.product-box {
+		font-size: 0;
+	}
+	.product {
+		display: inline-block;
+		width: 50%;
+	}
+}
+@media (min-width: 1200px) {
+	.hero-text h1 {
+		font-size: 42px;
+	}
+	.hero-text span {
+		font-size: 20px;
+	}
+}

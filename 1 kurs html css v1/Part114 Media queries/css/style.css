@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 20px;
+	font-size: 36px;
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	color: #fff;
+	overflow: hidden;
+}
+.square {
+	width: 50%;
+	height: 50%;
+	margin: 300px auto;
+	background-color: royalblue;
+	border: 3px solid black;
+	border-radius: 25px;
+}
+@media print {
+	.square {
+		border: 3px solid red;
+	}
+}
+@media (min-width: 500px) and (max-width: 600px) /* cały kod zaaplikowany poniżej będzie ładowany na stronie po osiągnięciu powyższych brakpointów */ {
+	.square {
+		background-color: red;
+	}
+}

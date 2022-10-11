@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nestlan</title>
+		<link rel="preconnect" href="https //fonts.gstatic.com" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=montserrat:wght100;400;700&display=swap"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/4fe226548b.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class=”square” style="background-color: royalblue;"></div>
+
+		<style>
+			/* !important przebija wszystko */
+			/*Ważność # (ID) 100 pkt 
+			ID powinno być zrezerwowne dla JS ze względów optymalizacyjnych */
+			#test {
+				background-color: tomato;
+			}
+			/*Ważność div. posiadającego klasę square 11 pkt */
+			div.square {
+				background-color: blue;
+			}
+			/*Ważność . (klasa) 10 pkt */
+			.square {
+				background-color: lime;
+			}
+			/*Ważność do elementu div zagnieżdżonego w section (element) 2 pkt */
+			section div {
+				background-color: royalblue;
+			}
+			/*Ważność div (element) 1 pkt */
+			div {
+				width: 600px;
+				height: 600px;
+				background-color: gold;
+			}
+		</style>
+		<section>
+			<div class="square" id="test"></div>
+		</section>
+	</body>
+</html>

@@ -13,33 +13,31 @@ body {
 	position: absolute;
 	top: 250px;
 	left: 50px;
-	height: 600px;
 	width: 150px;
+	height: 600px;
 	padding: 10px;
 	background-color: tomato;
 	overflow: hidden;
 	transition: height 0.3s;
 }
-
 .long:hover {
 	height: 200px;
 }
-
 .big {
 	position: absolute;
 	top: 250px;
 	right: 50px;
-	height: 600px;
 	width: 800px;
+	height: 600px;
 	background-color: royalblue;
 }
 .child {
+	border: 3px solid black;
 	height: 200px;
-	border: solid 3px #000;
-	transition: background-color 1s;
+	transition: background 1s;
 }
 .first + .child {
-	background-color: lime;
+	background-color: green;
 }
 
 .first:hover ~ .child {

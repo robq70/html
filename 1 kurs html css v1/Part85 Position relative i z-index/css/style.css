@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 50px;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	color: #fff;
+	font-size: 36px;
+}
+main {
+	margin-top: 200px;
+}
+div {
+	margin: 0 auto; /* Działa tylko na elementach blokowych */
+	height: 200px;
+	width: 600px;
+	border: 3px solid black;
+}
+.red {
+	background-color: tomato;
+}
+.blue {
+	position: relative;
+	top: -100px;
+	left: 50px;
+	/* PPrzy zmianie na position: relative możemy zacząć używać top i left (TL) lub bottom right (BR) do pozycjonowania elementu na osi X i Y według swojej oryginalnej TL lub BR krawędzi. Używamy jednocześnie do pozycjonowania tylko par elementów TL lub BR oraz cyfry dodatnie i ujemne.
+ 
+	*/
+	z-index: 166;
+	/* Z-index układa elementy według warstwy. Elementy z wyższym indexem będą zakrywać te, które mają niższy index. */
+	background-color: royalblue;
+}
+.green {
+	background-color: greenyellow;
+}
+
+/* PPosition relative wyciąga element z warstwy wizualnej. Czyli jeśli mamy 3 elementy jeden pod drugim i przesuniemy 2 poniżej 3 elementu to 2 pozostawi puste miejsce a 1 i 2 nie zauważą jego braku i nie wskoczą w to miejsce. */
