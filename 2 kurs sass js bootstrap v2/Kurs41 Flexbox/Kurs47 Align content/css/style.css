@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 50px;
+}
+section {
+	height: 600px;
+	background-color: #678;
+	display: flex;
+	flex-wrap: wrap;
+	/* kafelek ma 25% okna więc po zastosowaniu wrap w 1 rzędzie mieszczą się 4 a kolejne 4 pod spodem */
+	/* Ogólnie żeby to dawało jakiś efekt muszą być przynajmniej dwa rzędy */
+	align-content: stretch;
+	align-content: flex-start;
+	align-content: flex-end;
+	align-content: center;
+	align-content: space-evenly;
+	align-content: space-around;
+	align-content: space-between;
+}
+.square {
+	width: 25%;
+	text-align: center;
+}
+.one {
+	background-color: gold;
+}
+.two {
+	background-color: lime;
+}
+.three {
+	background-color: royalblue;
+}
+.four {
+	background-color: tomato;
+}

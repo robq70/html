@@ -1,0 +1,17 @@
+$width: 200px;
+$height: 200px;
+$bg-color: tomato;
+$second-bg-color: gold;
+
+div {
+	width: $width;
+	height: $height;
+}
+
+.one {
+	background-color: $bg-color;
+}
+
+.two {
+	background-color: $second-bg-color;
+}

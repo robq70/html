@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Nestlan</title>
+	<link rel="preconnect" href="https //fonts.gstatic.com" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=montserrat:wght100;400;700&display=swap" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<script src="https://kit.fontawesome.com/4fe226548b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<script>
+		// skrypt tworzy 500 kwadratów niebieskich
+		for (let i = 0; i < 500; i++) {
+			const div = document.createElement('div')
+			div.classList.add('square', 'one')
+			document.body.append(div)
+		}
+		// plus tworzy 500 kwadratów zielonych
+		for (let i = 0; i < 500; i++) {
+			const div = document.createElement('div')
+			div.classList.add('square', 'two')
+			document.body.append(div)
+		}
+	</script>
+</body>
+
+</html>

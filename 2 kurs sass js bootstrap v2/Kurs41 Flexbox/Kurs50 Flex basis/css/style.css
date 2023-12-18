@@ -1,0 +1,46 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 50px;
+}
+
+section {
+	display: flex;
+}
+
+.square {
+	flex-basis: 300px;
+	/* flex-basis jest ważniejszy od width który go nie nadpisuje i w zależności od tego czy mamy do czynienia z flex-direction row lub column operuje na szerokości lub na wysokości*/
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+}
+/* flex-basis jest zależny od flex-direction */
+
+.one {
+	background-color: gold;
+	flex: 0 1 300px;
+	flex: 1 0 300px;
+	/* flex: (czy chcemy rosnąć - grow) (czy chcemy się kurczyć shrink) 300px 
+	1. nie rośnij, kurcz się max - 300px
+	2. rośnij ale się nie kurcz min - 300px*/
+}
+
+.two {
+	background-color: lime;
+}
+
+.three {
+	background-color: royalblue;
+}
+
+.four {
+	background-color: tomato;
+}

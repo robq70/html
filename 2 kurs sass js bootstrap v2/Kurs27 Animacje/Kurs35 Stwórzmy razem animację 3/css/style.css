@@ -1,12 +1,11 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   color: #fff;
   background-color: #333;
@@ -29,8 +28,7 @@ body {
   height: 100px;
   background-color: #ffa608;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 70px #ffa608;
-          box-shadow: 0 0 70px #ffa608;
+  box-shadow: 0 0 70px #ffa608;
   -webkit-animation: dawn2 8s infinite linear;
           animation: dawn2 8s infinite linear;
 }
@@ -72,7 +70,7 @@ body {
 
 .car::after,
 .car::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 40px;
@@ -161,7 +159,6 @@ body {
     background-color: black;
   }
 }
-
 @-webkit-keyframes dawn2 {
   0% {
     top: 1000px;
@@ -176,7 +173,6 @@ body {
     top: 1000px;
   }
 }
-
 @keyframes dawn2 {
   0% {
     top: 1000px;
@@ -191,7 +187,6 @@ body {
     top: 1000px;
   }
 }
-
 @-webkit-keyframes move {
   from {
     left: -500px;
@@ -200,7 +195,6 @@ body {
     left: 1000px;
   }
 }
-
 @keyframes move {
   from {
     left: -500px;
@@ -209,26 +203,19 @@ body {
     left: 1000px;
   }
 }
-
 @-webkit-keyframes wheels {
   from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 @keyframes wheels {
   from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

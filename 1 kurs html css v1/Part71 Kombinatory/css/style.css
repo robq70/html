@@ -15,7 +15,7 @@ hr {
 	margin: 30px 0;
 }
 /* Znak div > p oznacza się że odwołujemy się bezpośrednio tylko do dzieci div */
-div ~ p {
+div + p {
 	color: lime;
 }
 /* Znak div + p oznacza się że odwołujemy się bezpośrednio do brata, który znajduje się zaraz pod nim, nie działa jeśli innny znacznik je oddziela np. <hr> lub inny ani na te niższe ani wyżej znajdujące się*/
